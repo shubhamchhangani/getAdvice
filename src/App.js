@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Footer from "./components/footer";
-import Logo from "./logo.svg";
 
 function App(){
   const [advice,setAdvice] = useState("Hello Buddy");
@@ -22,9 +21,7 @@ function App(){
     <button className="btn btn-light" onClick={getAdvice}>Get Advice</button>
     <Footer className="foot" />
     </div>
-<div> 
-<Logo />
-</div>
+
 </>
   )
 }
