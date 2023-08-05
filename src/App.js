@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Footer from "./components/footer";
+import Logo from "./logo.svg";
 
 function App(){
   const [advice,setAdvice] = useState("Hello Buddy");
@@ -9,6 +10,7 @@ function App(){
     setAdvice(json.slip.advice);
   }
   return(
+<>
     <div className="flexbox">
     <h3 className="para">Every click will display you a great adivce!</h3>
     <div className="container">
@@ -20,6 +22,10 @@ function App(){
     <button className="btn btn-light" onClick={getAdvice}>Get Advice</button>
     <Footer className="foot" />
     </div>
+<div> 
+<Logo />
+</div>
+</>
   )
 }
 
