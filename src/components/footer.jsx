@@ -1,7 +1,7 @@
 import React from 'react';
 function Footer(){
     return(
-        <footer>Simple React project by Shubhm</footer>
+        <footer>Simple React project by Shubham</footer>
     )
 }
 
