@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Footer from "./components/footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+  const [advice,setAdvice] = useState("Hello Buddy");
+  async function getAdvice(){
+    const res = await fetch('https://api.adviceslip.com/advice');
+    const json = await res.json();
+    setAdvice(json.slip.advice);
+  }
+  return(
+    <div className="flexbox">
+    <h3 className="para">Every click will display you a great adivce!</h3>
+    <div className="container">
+      <h1 className="adivce">{advice}</h1>
+      
+      
+
     </div>
-  );
+    <button className="btn btn-outline-light" onClick={getAdvice}>Get Advice</button>
+    <Footer className="foot" />
+    </div>
+  )
 }
 
 export default App;
