@@ -17,7 +17,7 @@ function App(){
       
 
     </div>
-    <button className="btn btn-outline-light" onClick={getAdvice}>Get Advice</button>
+    <button className="btn btn-light" onClick={getAdvice}>Get Advice</button>
     <Footer className="foot" />
     </div>
   )
